@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi primer título</title>
+    <style>
+        h1 {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>REGÍSTRATE</h2>
+    </div>
+    <div>
+        <form onsubmit="return false;">
+            <label for="name">Nombre </label>
+            <input type="text" id="name" name="name" placeholder="nombre"/>
+            <br><br>
+
+            <label for="lastname">Apellido paterno</label>
+            <input type="text" id="lastname" name="lastname" placeholder="apellido paterno"/>
+            <br><br>
+
+            <label for="apellidomaterno">Apellido materno</label>
+            <input type="text" name="apellidomaterno" id="apellidomaterno" placeholder="apellido materno"/>
+            <br><br>
+
+            <label for="edad">EDAD</label>
+            <input type="text" name="edad" id="edad" placeholder="edad"/>
+            <br><br>
+
+            <button type="button" onclick="mandarmensaje()">REGISTRAR</button>
+        </form>
+    </div>
+
+    <script>
+        function mandarmensaje() {
+            let nombre = document.getElementById("name").value;
+            let apellidopaterno = document.getElementById("lastname").value;
+            let apellidomaterno = document.getElementById("apellidomaterno").value;
+            let edad = document.getElementById("edad").value;
+
+            let mensaje = "Nombre: " + nombre + "\n" +
+                          "Apellido paterno: " + apellidopaterno + "\n" +
+                          "Apellido materno: " + apellidomaterno + "\n" +
+                          "Edad: " + edad;
+
+            alert( "Holaaaaa:  " + mensaje);
+        }
+    </script>
+</body>
+</html>
